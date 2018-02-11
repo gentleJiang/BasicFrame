@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="layout_replace" type="id"/>
+
+    <item name="id_top_bar" type="id"/>
+
+    <item name="id_topbar_right_button" type="id"/>
+
+    <!--设置页面-->
+    <item name="id_setting_mian_print_page_count" type="id"/>
+</resources>
