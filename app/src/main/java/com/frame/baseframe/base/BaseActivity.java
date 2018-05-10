@@ -19,10 +19,9 @@ abstract public class BaseActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View view = LayoutInflater.from(this).inflate(getLayoutId(),null);
-        view.setFitsSystemWindows(true);
         setContentView(view);
         ButterKnife.bind(this);
-        QMUIStatusBarHelper.translucent(this);
+//        QMUIStatusBarHelper.translucent(this);
         initData();
     }
 

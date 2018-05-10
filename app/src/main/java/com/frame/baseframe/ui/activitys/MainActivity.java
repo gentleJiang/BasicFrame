@@ -2,7 +2,9 @@ package com.frame.baseframe.ui.activitys;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.os.Build;
 import android.provider.Settings;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 
 import com.frame.baseframe.R;
@@ -20,8 +22,8 @@ public class MainActivity extends BaseActivity {
 
     private Dialog backDialog;
 
-    @BindView(R.id.id_top_bar)
-    QMUITopBar qmuiTopBar;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     @Override
     protected int getLayoutId() {
@@ -31,10 +33,14 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        qmuiTopBar.setTitle("主页");
         TTTTTTT t = new TTTTTTT();
         t.setQwe("111111");
-        LogUtils.d(t.getQwe());
+        LogUtils.d( "version ==" +  Build.VERSION.SDK_INT);
+
+        setSupportActionBar(toolbar);
+        //显示左上角的返回按钮
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher_round);
     }
 
     @Override
